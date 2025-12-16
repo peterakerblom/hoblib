@@ -12,9 +12,12 @@ func update(_delta) -> void:
 
 func physics_update(_delta) -> void:
 	var input_dir = Input.get_vector(
-		"ui_left", "ui_right",
-		"ui_up", "ui_down"
+		"left", "right",
+		"up", "down"
 	)
+	
+	if Input.is_action_just_pressed("interact") and player.interactable:
+		player.change_state(Enums.State.INTERACT)
 
-	if input_dir != Vector2.ZERO:
+	elif input_dir != Vector2.ZERO:
 		player.change_state(Enums.State.WALK)

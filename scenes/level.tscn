@@ -1,8 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://bdgtwvlxpmmco"]
+[gd_scene load_steps=5 format=3 uid="uid://bdgtwvlxpmmco"]
 
-[ext_resource type="PackedScene" uid="uid://y8nkr4q7j845" path="res://scenes/player.tscn" id="1_85457"]
+[ext_resource type="PackedScene" uid="uid://y8nkr4q7j845" path="res://scenes/player/player.tscn" id="1_85457"]
+[ext_resource type="PackedScene" uid="uid://c7wqa8xl3a25h" path="res://scenes/interactables/bookshelf.tscn" id="2_25ivq"]
+[ext_resource type="PackedScene" uid="uid://bprhvjfh1d5yy" path="res://scenes/interactables/book_pickup.tscn" id="3_sriv0"]
+[ext_resource type="PackedScene" uid="uid://cwjxpvnifk5ur" path="res://scenes/interactables/fireplace.tscn" id="4_wn6kq"]
 
 [node name="Level" type="Node2D"]
 
+[node name="BookPickup" parent="." instance=ExtResource("3_sriv0")]
+position = Vector2(432, 255)
+
+[node name="BookPickup2" parent="." instance=ExtResource("3_sriv0")]
+position = Vector2(297, 223)
+
+[node name="BookPickup3" parent="." instance=ExtResource("3_sriv0")]
+position = Vector2(572, 300)
+
+[node name="Bookshelf" parent="." instance=ExtResource("2_25ivq")]
+position = Vector2(455, 104)
+
+[node name="Bookshelf2" parent="." instance=ExtResource("2_25ivq")]
+position = Vector2(714, 106)
+
 [node name="Player" parent="." instance=ExtResource("1_85457")]
-position = Vector2(204, 149)
+position = Vector2(398, 333)
+
+[node name="Fireplace" parent="." instance=ExtResource("4_wn6kq")]
+position = Vector2(167, 56)

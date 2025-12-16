@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://y8nkr4q7j845"]
+
+[ext_resource type="Texture2D" uid="uid://bq62m1kbjngra" path="res://icon.svg" id="1_0lp4s"]
+[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_2y3sd"]
+[ext_resource type="PackedScene" uid="uid://buwpkd4svf0hb" path="res://scenes/player/inventory.tscn" id="2_uhlx1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_44bbt"]
+radius = 19.0
+height = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6cfio"]
+radius = 42.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+script = ExtResource("1_2y3sd")
+
+[node name="Inventory" parent="." instance=ExtResource("2_uhlx1")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.40625, 0.6875)
+texture = ExtResource("1_0lp4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_44bbt")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_6cfio")
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
