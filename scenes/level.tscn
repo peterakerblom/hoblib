@@ -16,6 +16,9 @@ position = Vector2(297, 223)
 [node name="BookPickup3" parent="." instance=ExtResource("3_sriv0")]
 position = Vector2(572, 300)
 
+[node name="BookPickup4" parent="." instance=ExtResource("3_sriv0")]
+position = Vector2(267, 222)
+
 [node name="Bookshelf" parent="." instance=ExtResource("2_25ivq")]
 position = Vector2(455, 104)
 
