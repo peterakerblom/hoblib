@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnxlb4muubu2e"]
+
+[ext_resource type="Script" path="res://scripts/npc/visitor.gd" id="1_3f73w"]
+[ext_resource type="Texture2D" uid="uid://d1ygm5y62p75n" path="res://assets/hoblib_player_32x22.png" id="1_fm7jx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bek4o"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wdqkb"]
+radius = 19.0
+
+[node name="Visitor" type="CharacterBody2D"]
+script = ExtResource("1_3f73w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0.541176, 0.572549, 1)
+texture_filter = 1
+position = Vector2(0, -14)
+texture = ExtResource("1_fm7jx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_bek4o")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_wdqkb")

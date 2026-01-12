@@ -1,27 +1,27 @@
 [gd_scene load_steps=6 format=3 uid="uid://y8nkr4q7j845"]
 
-[ext_resource type="Texture2D" uid="uid://bq62m1kbjngra" path="res://icon.svg" id="1_0lp4s"]
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_2y3sd"]
 [ext_resource type="PackedScene" uid="uid://buwpkd4svf0hb" path="res://scenes/player/inventory.tscn" id="2_uhlx1"]
+[ext_resource type="Texture2D" uid="uid://d1ygm5y62p75n" path="res://assets/hoblib_player_32x22.png" id="3_k623j"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_44bbt"]
-radius = 19.0
-height = 64.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_m50lr"]
+radius = 7.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6cfio"]
-radius = 42.0
+radius = 28.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_2y3sd")
 
 [node name="Inventory" parent="." instance=ExtResource("2_uhlx1")]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.40625, 0.6875)
-texture = ExtResource("1_0lp4s")
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_k623j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_44bbt")
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_m50lr")
 
 [node name="InteractionArea" type="Area2D" parent="."]
 

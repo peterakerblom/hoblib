@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-var speed = 200.0
+var speed = 100.0
 
 var current_state: PlayerState
 var states:= {}
