@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db1dj4o65b06d"
-path="res://.godot/imported/Pixilart_App 1.png-389318a5252c60cd055b90740054746d.ctex"
+uid="uid://btb73gc28rgtt"
+path="res://.godot/imported/teapot_32.png-e136b35add8da681e71b09b64febc9e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixilart_App 1.png"
-dest_files=["res://.godot/imported/Pixilart_App 1.png-389318a5252c60cd055b90740054746d.ctex"]
+source_file="res://assets/teapot_32.png"
+dest_files=["res://.godot/imported/teapot_32.png-e136b35add8da681e71b09b64febc9e8.ctex"]
 
 [params]
 

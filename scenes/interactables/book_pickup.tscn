@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://bprhvjfh1d5yy"]
 
 [ext_resource type="Script" path="res://scripts/interactables/book_pickup.gd" id="1_vgnvu"]
-[ext_resource type="Texture2D" uid="uid://bq62m1kbjngra" path="res://icon.svg" id="2_xsffd"]
+[ext_resource type="Texture2D" uid="uid://di82w6i2sbto5" path="res://assets/book_brown_gold_32.png" id="2_dacr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l33ru"]
-size = Vector2(20, 24)
+size = Vector2(22, 24)
 
 [node name="BookPickup" type="Area2D"]
 script = ExtResource("1_vgnvu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.171875, 0.203125)
-texture = ExtResource("2_xsffd")
+texture_filter = 1
+texture = ExtResource("2_dacr2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_l33ru")

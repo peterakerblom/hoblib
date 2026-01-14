@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csdcnq5w1p6o8"
-path="res://.godot/imported/Pixilart_App.png-895d04738d765b2cf793a57417a073b5.ctex"
+uid="uid://di82w6i2sbto5"
+path="res://.godot/imported/book_brown_gold_32.png-e7b4581c8b23651d2fa86b053845a1e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Pixilart_App.png"
-dest_files=["res://.godot/imported/Pixilart_App.png-895d04738d765b2cf793a57417a073b5.ctex"]
+source_file="res://assets/book_brown_gold_32.png"
+dest_files=["res://.godot/imported/book_brown_gold_32.png-e7b4581c8b23651d2fa86b053845a1e6.ctex"]
 
 [params]
 

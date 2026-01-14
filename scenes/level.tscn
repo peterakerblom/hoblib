@@ -55,7 +55,7 @@ zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
 [node name="Fireplace" parent="." instance=ExtResource("4_wn6kq")]
-position = Vector2(167, 56)
+position = Vector2(365, 199)
 
 [node name="Visior" parent="." instance=ExtResource("6_mbvq3")]
 position = Vector2(446, 322)
