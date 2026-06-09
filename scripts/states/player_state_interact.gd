@@ -3,7 +3,11 @@ extends PlayerState
 func enter() -> void:
 	state_name = "interact"
 	player.velocity = Vector2.ZERO
-	player.interactable.interact()
+	#player.interactable.interact()
+	var interactable = player.get_interactable()
+
+	if interactable:
+		interactable.interact()
 
 func exit() -> void:
 	pass

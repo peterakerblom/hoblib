@@ -7,7 +7,9 @@ var current_state: PlayerState
 var states:= {}
 
 var interactable: Interactable
+var interactables: Array[Interactable] = []
 
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var inventory: Inventory = $Inventory
 
 func _ready() -> void:
@@ -42,9 +44,15 @@ func change_state(state):
 
 func _on_interaction_area_entered(area: Area2D) -> void:
 	if area is Interactable:
-		interactable = area
+		interactables.append(area)
 
 
 func _on_interaction_area_exited(area: Area2D) -> void:
 	if area is Interactable:
-		interactable = null
+		interactables.erase(area)
+
+func get_interactable() -> Interactable:
+	if interactables.is_empty():
+		return null
+	
+	return interactables.back()
