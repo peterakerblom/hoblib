@@ -1,13 +1,14 @@
 extends CharacterBody2D
 class_name Visitor
 
-var speed = 100.0
+var speed = 20.0
 
 var current_state: NpcState
 var states:= {}
 
 var interactable: Interactable
 
+@onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var inventory: Inventory = $Inventory
 
 func _ready() -> void:

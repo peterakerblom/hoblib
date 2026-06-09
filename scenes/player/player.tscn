@@ -261,7 +261,7 @@ script = ExtResource("1_2y3sd")
 texture_filter = 1
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_qdoy2")
-animation = &"walk_right"
+animation = &"walk_up"
 autoplay = "idle"
 
 [node name="Inventory" parent="." instance=ExtResource("2_uhlx1")]

@@ -3,6 +3,7 @@ class_name NpcState
 
 var npc: CharacterBody2D
 var state_name: String
+var timer := 0.0
 
 func enter() -> void:
 	pass

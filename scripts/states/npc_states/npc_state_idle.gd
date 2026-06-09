@@ -3,6 +3,9 @@ extends NpcState
 func enter() -> void:
 	state_name = "idle"
 	npc.velocity = Vector2.ZERO
+	npc.animated_sprite.play("idle")
+	
+	timer = randf_range(2.0, 5.0)
 
 func exit() -> void:
 	pass
@@ -10,14 +13,8 @@ func exit() -> void:
 func update(_delta) -> void:
 	pass
 
-func physics_update(_delta) -> void:
-	#var input_dir = Input.get_vector(
-		#"left", "right",
-		#"up", "down"
-	#)
-	#
-	#if Input.is_action_just_pressed("interact") and player.interactable:
-		#player.change_state(Enums.State.INTERACT)
+func physics_update(delta) -> void:
+	timer -= delta
 
-	if npc.velocity != Vector2.ZERO:
+	if timer <= 0:
 		npc.change_state(Enums.NpcStateEnum.WALK)
