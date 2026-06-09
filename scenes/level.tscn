@@ -57,6 +57,7 @@ position = Vector2(572, 300)
 position = Vector2(267, 222)
 
 [node name="interactables" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Fireplace" parent="interactables" instance=ExtResource("4_wn6kq")]
 position = Vector2(373, 224)
@@ -68,6 +69,7 @@ position = Vector2(449, 212)
 position = Vector2(484, 212)
 
 [node name="static_objects" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Barrel" parent="static_objects" instance=ExtResource("8_nbml1")]
 position = Vector2(262, 303)
@@ -88,6 +90,7 @@ position = Vector2(551, 204)
 position = Vector2(575, 204)
 
 [node name="npcs" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="Visior" parent="npcs" instance=ExtResource("6_mbvq3")]
 position = Vector2(446, 322)
