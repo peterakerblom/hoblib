@@ -1,16 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://crph7v8bvy8qr"]
+[gd_scene format=3 uid="uid://crph7v8bvy8qr"]
 
-[ext_resource type="Texture2D" uid="uid://drnu7yxv4phbt" path="res://assets/barrel_32.png" id="1_bnayy"]
+[ext_resource type="Texture2D" uid="uid://b8lao521gn4lv" path="res://assets/barrel_32_outl.png" id="1_w0cnr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrpor"]
 radius = 8.0
 
-[node name="Barrel" type="StaticBody2D"]
+[node name="Barrel" type="StaticBody2D" unique_id=1338776054]
 texture_filter = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=865382583]
+texture_filter = 1
 position = Vector2(1, -2)
-texture = ExtResource("1_bnayy")
+texture = ExtResource("1_w0cnr")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true,
+"output_section": true,
+"pending_changes": {},
+"slice_section": true
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 1,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "res://assets/aseprites/barrel_32.aseprite",
+"source_uid": 8293089685507191613
+}
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=707175943]
 shape = SubResource("CircleShape2D_xrpor")
