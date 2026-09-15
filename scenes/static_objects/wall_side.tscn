@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1vefajqhv0k0"]
+
+[ext_resource type="Texture2D" uid="uid://ci5f7i3ec783s" path="res://assets/tiles/hoblib_wall_side_64.png" id="1_hxkdi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r82s4"]
+size = Vector2(8, 64)
+
+[node name="WallUp" type="StaticBody2D" unique_id=252392002]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=565845261]
+texture_filter = 1
+texture = ExtResource("1_hxkdi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200544107]
+shape = SubResource("RectangleShape2D_r82s4")
