@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cy3ptrcbcxgqy"]
+
+[node name="BooksInShelf" type="Node2D" unique_id=861408381]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1060698341]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.63571185, 0.40438908, 0.3634221, 1)
