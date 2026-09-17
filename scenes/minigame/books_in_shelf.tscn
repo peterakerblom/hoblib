@@ -1,8 +1,215 @@
 [gd_scene format=3 uid="uid://cy3ptrcbcxgqy"]
 
+[ext_resource type="Texture2D" uid="uid://b2udnghf50le7" path="res://assets/sprites/minigame_shelf_640.png" id="1_gnhes"]
+
 [node name="BooksInShelf" type="Node2D" unique_id=861408381]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1060698341]
+[node name="Container" type="Control" parent="." unique_id=1614389064]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="Container" unique_id=1166349524]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(0.63571185, 0.40438908, 0.3634221, 1)
+theme_override_constants/margin_left = 250
+
+[node name="TextureRect" type="TextureRect" parent="Container/MarginContainer2" unique_id=747523520]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("1_gnhes")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/MarginContainer2" unique_id=1835840000]
+layout_mode = 2
+theme_override_constants/margin_left = 63
+theme_override_constants/margin_top = 73
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/MarginContainer2/MarginContainer" unique_id=1073614996]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer" unique_id=530750786]
+layout_mode = 2
+
+[node name="Row1" type="HBoxContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer" unique_id=48777802]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1" unique_id=1383081444]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer" unique_id=1613328275]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1" unique_id=1098476392]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer2" unique_id=204663158]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1" unique_id=1692833726]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer3" unique_id=1243293840]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1" unique_id=1719054755]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer4" unique_id=243047204]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer" unique_id=1197526956]
+layout_mode = 2
+theme_override_constants/margin_top = 35
+
+[node name="Row2" type="HBoxContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2" unique_id=47339079]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2" unique_id=968324345]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2/AspectRatioContainer" unique_id=783875120]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2" unique_id=866731228]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2/AspectRatioContainer2" unique_id=1663418709]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2" unique_id=1950612432]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2/AspectRatioContainer3" unique_id=557014425]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2" unique_id=267520581]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer2/Row2/AspectRatioContainer4" unique_id=312337711]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer" unique_id=289402986]
+layout_mode = 2
+theme_override_constants/margin_top = 18
+
+[node name="Row3" type="HBoxContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3" unique_id=1130337763]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3" unique_id=832913945]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3/AspectRatioContainer" unique_id=1493994479]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3" unique_id=2100082301]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3/AspectRatioContainer2" unique_id=1370244000]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3" unique_id=1993730746]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3/AspectRatioContainer3" unique_id=1744999936]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3" unique_id=300027794]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer3/Row3/AspectRatioContainer4" unique_id=245836625]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="MarginContainer4" type="MarginContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer" unique_id=493949101]
+layout_mode = 2
+theme_override_constants/margin_top = 26
+
+[node name="Row4" type="HBoxContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4" unique_id=158715049]
+layout_mode = 2
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4" unique_id=632069150]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4/AspectRatioContainer" unique_id=1361265432]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4" unique_id=579740384]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4/AspectRatioContainer2" unique_id=86784916]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4" unique_id=1558775093]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4/AspectRatioContainer3" unique_id=2024662817]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4" unique_id=442210204]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4/AspectRatioContainer4" unique_id=1030397003]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
