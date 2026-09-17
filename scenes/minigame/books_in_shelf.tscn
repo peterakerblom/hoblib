@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cy3ptrcbcxgqy"]
 
 [ext_resource type="Texture2D" uid="uid://b2udnghf50le7" path="res://assets/sprites/minigame_shelf_640.png" id="1_gnhes"]
+[ext_resource type="Texture2D" uid="uid://yqna1apixot1" path="res://assets/lantern_32.png" id="2_nxuge"]
+[ext_resource type="Script" uid="uid://c8muqjmqn7ord" path="res://scenes/minigame/test_btn.gd" id="3_wcpnx"]
 
 [node name="BooksInShelf" type="Node2D" unique_id=861408381]
 
@@ -18,6 +20,12 @@ theme_override_constants/margin_left = 250
 texture_filter = 1
 layout_mode = 2
 texture = ExtResource("1_gnhes")
+
+[node name="Lantern32" type="Sprite2D" parent="Container/MarginContainer2/TextureRect" unique_id=493257101]
+texture_filter = 1
+position = Vector2(536, 474)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_nxuge")
 
 [node name="MarginContainer" type="MarginContainer" parent="Container/MarginContainer2" unique_id=1835840000]
 layout_mode = 2
@@ -38,6 +46,10 @@ custom_minimum_size = Vector2(60, 100)
 clip_contents = true
 layout_mode = 2
 stretch_mode = 3
+
+[node name="TextureButton" type="TextureButton" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer" unique_id=792538802]
+layout_mode = 2
+script = ExtResource("3_wcpnx")
 
 [node name="ColorRect" type="ColorRect" parent="Container/MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer" unique_id=1613328275]
 layout_mode = 2
