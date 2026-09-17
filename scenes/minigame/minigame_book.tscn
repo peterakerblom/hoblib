@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://j731awgceeyo"]
+
+[ext_resource type="Texture2D" uid="uid://by8fy0nj0ahac" path="res://assets/sprites/book_cover_red_320.png" id="1_7n8vj"]
+[ext_resource type="Script" uid="uid://olcc4kni10ou" path="res://scripts/minigame/minigame_book.gd" id="1_enml1"]
+
+[node name="TextureButton" type="TextureButton" unique_id=1272719096]
+texture_filter = 1
+clip_contents = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -160.0
+offset_right = 160.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_7n8vj")
+ignore_texture_size = true
+script = ExtResource("1_enml1")
+
+[node name="TextureRectIcon" type="TextureRect" parent="." unique_id=1990172675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
