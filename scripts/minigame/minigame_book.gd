@@ -10,6 +10,7 @@ signal book_clicked(genre)
 func _ready() -> void:
 	if genre_texture:
 		genre_icon.texture = genre_texture
+	add_to_group("minigame_books")
 
 
 func _on_pressed() -> void:

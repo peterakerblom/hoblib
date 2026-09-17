@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://cy3ptrcbcxgqy"]
 
+[ext_resource type="Script" uid="uid://btaurpq0smli8" path="res://scripts/minigame/books_in_shelf.gd" id="1_31w8l"]
 [ext_resource type="Texture2D" uid="uid://b2udnghf50le7" path="res://assets/sprites/minigame_shelf_640.png" id="1_gnhes"]
 [ext_resource type="Texture2D" uid="uid://yqna1apixot1" path="res://assets/lantern_32.png" id="2_nxuge"]
 [ext_resource type="PackedScene" uid="uid://j731awgceeyo" path="res://scenes/minigame/minigame_book.tscn" id="3_wcpnx"]
 [ext_resource type="Texture2D" uid="uid://c7t3tremppnco" path="res://assets/sprites/icon_dragon_32.png" id="4_d00ta"]
+[ext_resource type="Texture2D" uid="uid://d2itypndpoocl" path="res://assets/sprites/icon_mountain_32.png" id="6_ed8tf"]
+[ext_resource type="Texture2D" uid="uid://cgvu2itdfjuf3" path="res://assets/sprites/ball_16.png" id="6_tej4a"]
 
 [node name="BooksInShelf" type="Control" unique_id=1870269912]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_31w8l")
 
 [node name="MarginContainer2" type="MarginContainer" parent="." unique_id=1166349524]
 layout_mode = 0
@@ -46,7 +50,7 @@ clip_contents = true
 layout_mode = 2
 stretch_mode = 3
 
-[node name="TextureButton2" parent="MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer" unique_id=1272719096 groups=["minigame_books"] instance=ExtResource("3_wcpnx")]
+[node name="TextureButton2" parent="MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer" unique_id=1272719096 instance=ExtResource("3_wcpnx")]
 layout_mode = 2
 genre_texture = ExtResource("4_d00ta")
 
@@ -56,9 +60,10 @@ clip_contents = true
 layout_mode = 2
 stretch_mode = 3
 
-[node name="ColorRect" type="ColorRect" parent="MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer2" unique_id=204663158]
+[node name="TextureButton" parent="MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1/AspectRatioContainer2" unique_id=2037630065 instance=ExtResource("3_wcpnx")]
 layout_mode = 2
-color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+genre_name = "adventure"
+genre_texture = ExtResource("6_ed8tf")
 
 [node name="AspectRatioContainer3" type="AspectRatioContainer" parent="MarginContainer2/MarginContainer/VBoxContainer/MarginContainer/Row1" unique_id=1692833726]
 custom_minimum_size = Vector2(60, 100)
@@ -220,3 +225,8 @@ stretch_mode = 3
 [node name="ColorRect" type="ColorRect" parent="MarginContainer2/MarginContainer/VBoxContainer/MarginContainer4/Row4/AspectRatioContainer4" unique_id=1030397003]
 layout_mode = 2
 color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=725923597]
+
+[node name="PointLight2D" type="PointLight2D" parent="CanvasLayer" unique_id=863380790]
+texture = ExtResource("6_tej4a")
