@@ -1,6 +1,7 @@
 extends Control
 
 signal book_selected(genre)
+# var minigame = preload("res://scenes/level.tscn")
 
 var target_genre: String = "dragons"
 # Called when the node enters the scene tree for the first time.
@@ -13,7 +14,9 @@ func _on_book_selected(selected_genre: String):
 		print("Right book found!")
 		emit_signal("book_selected", selected_genre)
 		queue_free()
+		get_tree().change_scene_to_file("res://scenes/level.tscn")
 	else:
 		print("Wrong book found!")
 		emit_signal("book_selected", selected_genre)
 		queue_free()
+		get_tree().change_scene_to_file("res://scenes/level.tscn")
