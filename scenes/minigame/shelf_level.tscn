@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://c5my70684p2nu"]
+
+[ext_resource type="PackedScene" uid="uid://j731awgceeyo" path="res://scenes/minigame/minigame_book.tscn" id="1_oc4db"]
+[ext_resource type="PackedScene" uid="uid://b5cgsa4qmb3di" path="res://scenes/minigame/shelf_book.tscn" id="1_t38jq"]
+
+[node name="MarginContainer" type="MarginContainer" unique_id=1798199491]
+
+[node name="Row1" type="HBoxContainer" parent="." unique_id=1346159199]
+layout_mode = 2
+
+[node name="AspectRatioContainer" parent="Row1" unique_id=1920799669 instance=ExtResource("1_t38jq")]
+layout_mode = 2
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="Row1" unique_id=1771846637]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="TextureButton" parent="Row1/AspectRatioContainer2" unique_id=1271340872 instance=ExtResource("1_oc4db")]
+layout_mode = 2
+
+[node name="AspectRatioContainer3" type="AspectRatioContainer" parent="Row1" unique_id=1050537069]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Row1/AspectRatioContainer3" unique_id=1975282720]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)
+
+[node name="AspectRatioContainer4" type="AspectRatioContainer" parent="Row1" unique_id=1437929342]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+layout_mode = 2
+stretch_mode = 3
+
+[node name="ColorRect" type="ColorRect" parent="Row1/AspectRatioContainer4" unique_id=1808575492]
+layout_mode = 2
+color = Color(0.34436774, 0.55266136, 0.48811972, 1)

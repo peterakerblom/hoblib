@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b5cgsa4qmb3di"]
+
+[ext_resource type="PackedScene" uid="uid://j731awgceeyo" path="res://scenes/minigame/minigame_book.tscn" id="1_c4u38"]
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" unique_id=1920799669]
+custom_minimum_size = Vector2(60, 100)
+clip_contents = true
+stretch_mode = 3
+
+[node name="TextureButton2" parent="." unique_id=1272719096 instance=ExtResource("1_c4u38")]
+layout_mode = 2
