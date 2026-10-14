@@ -4,22 +4,25 @@ signal book_selected(genre)
 
 @onready var v_box: VBoxContainer = $MarginContainer2/MarginContainer/VBoxContainer
 var shelf_book = preload("res://scenes/minigame/shelf_book.tscn")
+var test_shelf_book = preload("res://scenes/minigame/test_btn.tscn")
 var target_genre: String = "dragon"
 
 func _ready() -> void:
 	for level in range(4):
 		var shelf_container: MarginContainer = MarginContainer.new()
-		shelf_container.add_theme_constant_override("margin_top", 20)
+		shelf_container.add_theme_constant_override("margin_top", 5)
 		shelf_container.add_theme_constant_override("margin_right", 0)
-		shelf_container.add_theme_constant_override("margin_bottom", 0)
+		shelf_container.add_theme_constant_override("margin_bottom", 10)
 
 		var row_container = HBoxContainer.new()
-		
+		row_container.alignment = BoxContainer.ALIGNMENT_BEGIN
+		row_container.add_theme_constant_override("separation", 0)	
 		shelf_container.add_child(row_container)
 		v_box.add_child(shelf_container)
-		for book_index in range(5):
-			var shelf_book = shelf_book.instantiate()
-			row_container.add_child(shelf_book)
+		for book_index in range(8):
+			#var new_shelf_book = shelf_book.instantiate()
+			var new_shelf_book = test_shelf_book.instantiate()
+			row_container.add_child(new_shelf_book)
 	
 	for book in get_tree().get_nodes_in_group("minigame_books"):
 		book.connect("book_clicked", Callable(self, "_on_book_selected"))

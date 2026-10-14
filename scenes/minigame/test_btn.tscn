@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cscnbr7x4fynt"]
+
+[ext_resource type="Script" uid="uid://07wc5lktrsyv" path="res://scripts/minigame/test_btn.gd" id="1_11e4b"]
+
+[node name="TestBtn" type="TextureButton" unique_id=434266250]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_11e4b")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=286307311]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
