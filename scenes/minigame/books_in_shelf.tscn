@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://btaurpq0smli8" path="res://scripts/minigame/books_in_shelf.gd" id="1_31w8l"]
 [ext_resource type="Texture2D" uid="uid://b2udnghf50le7" path="res://assets/sprites/minigame_shelf_640.png" id="1_gnhes"]
 [ext_resource type="Texture2D" uid="uid://yqna1apixot1" path="res://assets/lantern_32.png" id="2_nxuge"]
-[ext_resource type="Texture2D" uid="uid://cgvu2itdfjuf3" path="res://assets/sprites/ball_16.png" id="6_tej4a"]
+[ext_resource type="PackedScene" uid="uid://ck57qaebauog1" path="res://scenes/minigame/shelf_light_source.tscn" id="4_d00ta"]
 
 [node name="BooksInShelf" type="Control" unique_id=1870269912]
 layout_mode = 3
@@ -22,6 +22,7 @@ layout_mode = 2
 texture = ExtResource("1_gnhes")
 
 [node name="Lantern32" type="Sprite2D" parent="MarginContainer2/TextureRect" unique_id=493257101]
+visible = false
 texture_filter = 1
 position = Vector2(536, 474)
 scale = Vector2(3.5, 3.5)
@@ -35,7 +36,11 @@ theme_override_constants/margin_top = 73
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/MarginContainer" unique_id=1073614996]
 layout_mode = 2
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=725923597]
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1509717559]
+color = Color(0.033153206, 0.023577588, 0.016712895, 1)
 
-[node name="PointLight2D" type="PointLight2D" parent="CanvasLayer" unique_id=863380790]
-texture = ExtResource("6_tej4a")
+[node name="ShelfLightSource" parent="." unique_id=227689962 instance=ExtResource("4_d00ta")]
+position = Vector2(790, 498)
+
+[node name="ShelfLightSource2" parent="." unique_id=971252498 instance=ExtResource("4_d00ta")]
+position = Vector2(441, 379)

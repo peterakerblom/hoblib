@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ck57qaebauog1"]
+
+[ext_resource type="Texture2D" uid="uid://bltk8mvpjhyri" path="res://assets/candle_16.png" id="1_2cyor"]
+[ext_resource type="Texture2D" uid="uid://b4rsck2tc0h0b" path="res://assets/other/2d_lights_and_shadows_neutral_point_light.bBSkWal0.webp" id="2_63yqq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ynxr4"]
+size = Vector2(5, 13)
+
+[node name="ShelfLightSource" type="Node2D" unique_id=227689962]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2136580027]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1488891090]
+texture_filter = 1
+texture = ExtResource("1_2cyor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1815109757]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_ynxr4")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1574923922]
+color = Color(1, 0.7490196, 0.27058825, 0.7058824)
+energy = 2.0
+texture = ExtResource("2_63yqq")
+texture_scale = 0.4

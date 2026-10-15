@@ -1,12 +1,11 @@
 #extends Button
 extends TextureButton
 
-#signal book_clicked(genre)
+signal book_clicked(genre)
 var genre_name: String
 #@export var genre_texture: Texture2D  
 @onready var texture_rect: TextureRect = $TextureRect
 
-#@onready var genre_icon: TextureRect = $TextureRectIcon
 
 func _ready() -> void:
 	#set_size(Vector2(10, 10))
@@ -22,15 +21,17 @@ func _ready() -> void:
 	
 	if texture:
 		texture_rect.texture = texture
-	#self.size = Vector2(3, 3)
+
 	add_to_group("minigame_books")
-	print("self.size")
-	print(self.size)
-	print("self.get_size()")
-	print(self.get_size())
 
 
 #func _on_pressed() -> void:
 	#print("genre_name")
 	#print(genre_name)
 	#emit_signal("book_clicked", genre_name)
+
+
+func _on_pressed() -> void:
+	print("genre_name")
+	print(genre_name)
+	emit_signal("book_clicked", genre_name)
