@@ -3,12 +3,14 @@ extends Control
 signal book_selected(genre)
 
 @onready var v_box: VBoxContainer = $MarginContainer2/MarginContainer/VBoxContainer
+@onready var shelf_light_source: Node2D = $ShelfLightSource
 
 #var shelf_book = preload("res://scenes/minigame/shelf_book.tscn")
 var shelf_book = preload("res://scenes/minigame/shelf_book_btn.tscn")
 var target_genre: String = "dragon"
 
 func _ready() -> void:
+	self.connect("is_droped", Callable(self, "_on_light_source_droped"))
 	for level in range(4):
 		var shelf_container: MarginContainer = MarginContainer.new()
 		shelf_container.add_theme_constant_override("margin_top", 5)
@@ -42,3 +44,6 @@ func _on_book_selected(selected_genre: String):
 		emit_signal("book_selected", selected_genre)
 		queue_free()
 		get_tree().change_scene_to_file("res://scenes/level.tscn")
+
+func _on_light_source_droped(is_droped: bool):
+	print("DROPED")

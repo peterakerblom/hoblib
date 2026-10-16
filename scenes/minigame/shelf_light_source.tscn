@@ -1,25 +1,29 @@
 [gd_scene format=3 uid="uid://ck57qaebauog1"]
 
-[ext_resource type="Texture2D" uid="uid://bltk8mvpjhyri" path="res://assets/candle_16.png" id="1_2cyor"]
+[ext_resource type="Texture2D" uid="uid://yqna1apixot1" path="res://assets/lantern_32.png" id="1_63yqq"]
+[ext_resource type="Script" uid="uid://b05urocrpaes1" path="res://scripts/minigame/shelf_light_source.gd" id="1_v7ii7"]
 [ext_resource type="Texture2D" uid="uid://b4rsck2tc0h0b" path="res://assets/other/2d_lights_and_shadows_neutral_point_light.bBSkWal0.webp" id="2_63yqq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ynxr4"]
-size = Vector2(5, 13)
+size = Vector2(33, 63)
 
-[node name="ShelfLightSource" type="Node2D" unique_id=227689962]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=2136580027]
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1488891090]
-texture_filter = 1
-texture = ExtResource("1_2cyor")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1815109757]
-position = Vector2(-0.5, -0.5)
-shape = SubResource("RectangleShape2D_ynxr4")
+[node name="ShelfLightSource" type="Area2D" unique_id=968210745]
+script = ExtResource("1_v7ii7")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1574923922]
 color = Color(1, 0.7490196, 0.27058825, 0.7058824)
-energy = 2.0
+energy = 2.5
 texture = ExtResource("2_63yqq")
-texture_scale = 0.4
+texture_scale = 0.5
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1488891090]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("1_63yqq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1815109757]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_ynxr4")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="is_droped" from="." to="." method="_on_is_droped"]
