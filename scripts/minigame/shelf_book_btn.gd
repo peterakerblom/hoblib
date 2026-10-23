@@ -34,4 +34,4 @@ func _ready() -> void:
 func _on_pressed() -> void:
 	print("genre_name")
 	print(genre_name)
-	emit_signal("book_clicked", genre_name)
+	emit_signal("book_clicked", genre_name, self)

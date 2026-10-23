@@ -10,7 +10,11 @@ height = 124.0
 
 [node name="BooksInShelf" type="Control" unique_id=1870269912]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_31w8l")
 
@@ -56,3 +60,13 @@ offset_top = 34.0
 offset_right = 825.0
 offset_bottom = 72.0
 text = "You must place the light back on the table before picking a book."
+
+[node name="AnimationLayer" type="Control" parent="." unique_id=810977377]
+z_index = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
