@@ -104,7 +104,7 @@ position = Vector2(493, 353)
 position = Vector2(225, 226)
 
 [node name="Armchair" parent="static_objects" unique_id=1959219166 instance=ExtResource("4_hlwbu")]
-position = Vector2(359, 282)
+position = Vector2(270, 279)
 
 [node name="npcs" type="Node2D" parent="." unique_id=889396413]
 y_sort_enabled = true
