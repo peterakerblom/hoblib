@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cco2ydpetor7p"]
+
+[ext_resource type="Script" uid="uid://dx1xlsb6qsyw" path="res://scripts/ui/button_play.gd" id="1_ad3a0"]
+
+[node name="Options" type="Control" unique_id=1661775609]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1689964349]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.63121176, 0.6181138, 0.31399256, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=803091793]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -50.5
+offset_right = 48.0
+offset_bottom = 50.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1781312027]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+
+[node name="ButtonPlay" type="Button" parent="VBoxContainer" unique_id=787590467]
+layout_mode = 2
+text = "Start Game"
+script = ExtResource("1_ad3a0")
+
+[node name="ButtonOptions" type="Button" parent="VBoxContainer" unique_id=851316237]
+layout_mode = 2
+text = "Options"
+
+[node name="ButtonExit" type="Button" parent="VBoxContainer" unique_id=507565220]
+layout_mode = 2
+text = "Exit
+"

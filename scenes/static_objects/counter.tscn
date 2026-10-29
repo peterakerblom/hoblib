@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cb85vs3eprxmp"]
+
+[ext_resource type="Texture2D" uid="uid://cpoxhxfq3nblf" path="res://assets/sprites/counter_64.png" id="1_dw3fw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ftiyt"]
+size = Vector2(28, 14.285719)
+
+[node name="Counter" type="StaticBody2D" unique_id=190575247]
+texture_filter = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1917999584]
+texture_filter = 1
+position = Vector2(0, -16)
+texture = ExtResource("1_dw3fw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=942781614]
+position = Vector2(0, 3)
+scale = Vector2(2.12, 1.3999997)
+shape = SubResource("RectangleShape2D_ftiyt")

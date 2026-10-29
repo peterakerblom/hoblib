@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cvycriytsbhsp" path="res://scenes/static_objects/wall_left_down.tscn" id="18_5k0ak"]
 [ext_resource type="PackedScene" uid="uid://cqg0co7824yxv" path="res://scenes/static_objects/wall_right_up.tscn" id="19_wu01b"]
 [ext_resource type="PackedScene" uid="uid://ea2qeshukeeq" path="res://scenes/static_objects/wall_up_door.tscn" id="20_8gofh"]
+[ext_resource type="PackedScene" uid="uid://cb85vs3eprxmp" path="res://scenes/static_objects/counter.tscn" id="21_h6wmr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e65ai"]
 texture = ExtResource("1_sh2hu")
@@ -170,3 +171,6 @@ position = Vector2(544, 165)
 
 [node name="WallUpDoor1" parent="walls" unique_id=167480163 instance=ExtResource("20_8gofh")]
 position = Vector2(352, 165)
+
+[node name="Counter" parent="." unique_id=190575247 instance=ExtResource("21_h6wmr")]
+position = Vector2(372, 298)
