@@ -174,3 +174,6 @@ position = Vector2(352, 165)
 
 [node name="Counter" parent="." unique_id=190575247 instance=ExtResource("21_h6wmr")]
 position = Vector2(372, 298)
+
+[node name="VisitorSpawnPoints" type="Marker2D" parent="." unique_id=506034062]
+position = Vector2(330, 424)

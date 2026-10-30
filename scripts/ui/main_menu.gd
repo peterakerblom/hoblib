@@ -4,6 +4,7 @@ extends Control
 @onready var button_options: Button = $VBoxContainer/ButtonOptions
 @onready var button_exit: Button = $VBoxContainer/ButtonExit
 @onready var level_str = "res://scenes/level.tscn"
+@onready var options_menu_str = "res://scenes/ui/options.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	button_play.pressed.connect(_on_button_play_pressed.bind(button_play))
@@ -22,6 +23,7 @@ func _on_button_play_pressed() -> void:
 
 
 func _on_button_options_pressed() -> void:
+	get_tree().change_scene_to_file(options_menu_str)
 	pass # Replace with function body.
 
 

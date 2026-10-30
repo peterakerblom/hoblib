@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cco2ydpetor7p"]
 
-[ext_resource type="Script" uid="uid://dx1xlsb6qsyw" path="res://scripts/ui/button_play.gd" id="1_ad3a0"]
+[ext_resource type="Script" uid="uid://bfnkmq7gioa4o" path="res://scripts/ui/options.gd" id="1_ad3a0"]
 
 [node name="Options" type="Control" unique_id=1661775609]
 layout_mode = 3
@@ -9,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ad3a0")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1689964349]
 layout_mode = 1
@@ -38,16 +39,14 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Options"
 
-[node name="ButtonPlay" type="Button" parent="VBoxContainer" unique_id=787590467]
+[node name="ButtonBack" type="Button" parent="VBoxContainer" unique_id=507565220]
 layout_mode = 2
-text = "Start Game"
-script = ExtResource("1_ad3a0")
-
-[node name="ButtonOptions" type="Button" parent="VBoxContainer" unique_id=851316237]
-layout_mode = 2
-text = "Options"
-
-[node name="ButtonExit" type="Button" parent="VBoxContainer" unique_id=507565220]
-layout_mode = 2
-text = "Exit
+text = "Back
 "
+
+[node name="CheckButtonFullscreens" type="CheckButton" parent="VBoxContainer" unique_id=1904438662]
+layout_mode = 2
+text = "Fullscreen"
+
+[connection signal="pressed" from="VBoxContainer/ButtonBack" to="." method="_on_button_back_pressed"]
+[connection signal="toggled" from="VBoxContainer/CheckButtonFullscreens" to="." method="_on_check_button_fullscreens_toggled"]

@@ -46,6 +46,7 @@ text = "Start Game"
 script = ExtResource("2_fe2o3")
 
 [node name="ButtonOptions" type="Button" parent="VBoxContainer" unique_id=1059145707]
+visible = false
 layout_mode = 2
 text = "Options"
 
