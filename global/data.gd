@@ -7,4 +7,6 @@ var genres := {
 	2 : "mountain",
 	3 : "crown",
 	4 : "plant",
+	5 : "bread",
+	6 : "hammer",
 }
