@@ -10,4 +10,5 @@ var genres := {
 	5 : "bread",
 	6 : "hammer",
 	7 : "heart",
+	8 : "sword",
 }
