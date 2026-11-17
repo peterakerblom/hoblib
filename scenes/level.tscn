@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bdgtwvlxpmmco"]
 
 [ext_resource type="PackedScene" uid="uid://y8nkr4q7j845" path="res://scenes/player/player.tscn" id="1_85457"]
+[ext_resource type="Script" uid="uid://ct7oxf2kgfrh4" path="res://scripts/level.gd" id="1_pqd0y"]
 [ext_resource type="Texture2D" uid="uid://b4k7g5grdfjb7" path="res://assets/tiles/wood_floor_tiles.png" id="1_sh2hu"]
 [ext_resource type="PackedScene" uid="uid://c7wqa8xl3a25h" path="res://scenes/interactables/bookshelf.tscn" id="2_25ivq"]
 [ext_resource type="Texture2D" uid="uid://bw73ytv5oullb" path="res://assets/tiles/tiles_apollo_2.png" id="2_ihjr1"]
@@ -9,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://d1jqwmxng46yu" path="res://assets/tiles/tiles_apollo_2_dark.png" id="3_wrovn"]
 [ext_resource type="PackedScene" uid="uid://c8avrg5u7pscp" path="res://scenes/static_objects/armchair.tscn" id="4_hlwbu"]
 [ext_resource type="PackedScene" uid="uid://cwjxpvnifk5ur" path="res://scenes/interactables/fireplace.tscn" id="4_wn6kq"]
-[ext_resource type="PackedScene" uid="uid://bnxlb4muubu2e" path="res://scenes/npc/visior.tscn" id="6_mbvq3"]
 [ext_resource type="PackedScene" uid="uid://crph7v8bvy8qr" path="res://scenes/static_objects/barrel.tscn" id="8_nbml1"]
 [ext_resource type="PackedScene" uid="uid://cbw3o53ayiuvn" path="res://scenes/static_objects/wall_up.tscn" id="8_t1y8k"]
 [ext_resource type="PackedScene" uid="uid://b1rhomfnv0yvu" path="res://scenes/interactables/bread_pickup.tscn" id="9_rpg2d"]
@@ -48,6 +48,7 @@ sources/2 = SubResource("TileSetAtlasSource_ghqm5")
 
 [node name="Level" type="Node2D" unique_id=241710488]
 y_sort_enabled = true
+script = ExtResource("1_pqd0y")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=674581150]
 rendering_quadrant_size = 32
@@ -72,7 +73,7 @@ position_smoothing_enabled = true
 position = Vector2(305, 346)
 
 [node name="BreadPickup" parent="pickups" unique_id=776794516 instance=ExtResource("9_rpg2d")]
-position = Vector2(354, 371)
+position = Vector2(212, 327)
 
 [node name="interactables" type="Node2D" parent="." unique_id=495939342]
 y_sort_enabled = true
@@ -109,10 +110,6 @@ position = Vector2(270, 279)
 
 [node name="npcs" type="Node2D" parent="." unique_id=889396413]
 y_sort_enabled = true
-
-[node name="Visior" parent="npcs" unique_id=1177107419 instance=ExtResource("6_mbvq3")]
-position = Vector2(446, 322)
-motion_mode = 1
 
 [node name="walls" type="Node2D" parent="." unique_id=1999180998]
 y_sort_enabled = true
@@ -176,4 +173,11 @@ position = Vector2(352, 165)
 position = Vector2(372, 298)
 
 [node name="VisitorSpawnPoints" type="Marker2D" parent="." unique_id=506034062]
-position = Vector2(330, 424)
+position = Vector2(363, 433)
+
+[node name="VisitorMoveToPoints" type="Marker2D" parent="." unique_id=1590410558]
+position = Vector2(370, 327)
+
+[node name="VisitorSpawnTimer" type="Timer" parent="." unique_id=2003566904]
+one_shot = true
+autostart = true

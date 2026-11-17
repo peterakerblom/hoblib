@@ -1,8 +1,9 @@
-[gd_scene load_steps=37 format=3 uid="uid://bnxlb4muubu2e"]
+[gd_scene format=3 uid="uid://bnxlb4muubu2e"]
 
-[ext_resource type="Script" path="res://scripts/npc/visitor.gd" id="1_3f73w"]
+[ext_resource type="Script" uid="uid://3hrwhnwwnp16" path="res://scripts/npc/visitor.gd" id="1_3f73w"]
 [ext_resource type="Texture2D" uid="uid://d1ygm5y62p75n" path="res://assets/hoblib_player_32x22.png" id="1_fm7jx"]
 [ext_resource type="Texture2D" uid="uid://d08ncp5tpvat7" path="res://assets/Top-down Character (32x32, idle-run).png" id="3_nbq12"]
+[ext_resource type="Texture2D" uid="uid://cwcg5xre1l1ey" path="res://assets/sprites/talk_panel_32.png" id="4_sh4xr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bek4o"]
 radius = 7.0
@@ -133,7 +134,7 @@ region = Rect2(160, 384, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_7o8o6"]
 animations = [{
 "frames": [],
-"loop": true,
+"loop": 1,
 "name": &"default",
 "speed": 5.0
 }, {
@@ -156,7 +157,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1g41r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 8.0
 }, {
@@ -179,7 +180,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pjreh")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_down",
 "speed": 8.0
 }, {
@@ -202,7 +203,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ssimw")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_left",
 "speed": 8.0
 }, {
@@ -225,7 +226,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hcvws")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_right",
 "speed": 8.0
 }, {
@@ -248,35 +249,50 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wwfxv")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk_up",
 "speed": 8.0
 }]
 
-[node name="Visitor" type="CharacterBody2D"]
+[node name="Visitor" type="CharacterBody2D" unique_id=119768299]
 script = ExtResource("1_3f73w")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=834831627]
 visible = false
 modulate = Color(1, 0.541176, 0.572549, 1)
 texture_filter = 1
 position = Vector2(0, -14)
 texture = ExtResource("1_fm7jx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=113207767]
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_bek4o")
 
-[node name="InteractionArea" type="Area2D" parent="."]
+[node name="InteractionArea" type="Area2D" parent="." unique_id=139044628]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=44284705]
 position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_wdqkb")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1446503445]
 modulate = Color(0.62817, 0.478324, 0.364694, 1)
 texture_filter = 1
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_7o8o6")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="TalkBubbleSprite2D" type="Sprite2D" parent="." unique_id=1382113540]
+visible = false
+texture_filter = 1
+position = Vector2(8, -37)
+texture = ExtResource("4_sh4xr")
+
+[node name="TextureRectIcon" type="TextureRect" parent="." unique_id=811854951]
+visible = false
+texture_filter = 1
+offset_left = -2.0
+offset_top = -51.0
+offset_right = 48.0
+offset_bottom = -1.0
+scale = Vector2(0.39980766, 0.3899065)

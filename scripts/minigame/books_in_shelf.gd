@@ -10,7 +10,8 @@ signal book_selected(genre)
 @onready var animation_layer: Control = $AnimationLayer
 
 var shelf_book = preload("res://scenes/minigame/shelf_book_btn.tscn")
-var target_genre: String = "dragon"
+#var target_genre: String = "dragon"
+var target_genre: String = Minigame.target_genre
 var selected_book: TextureButton
 
 func _ready() -> void:
