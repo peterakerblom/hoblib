@@ -8,6 +8,7 @@ signal book_selected(genre)
 @onready var label: Label = $CanvasLayer/Label
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
 @onready var animation_layer: Control = $AnimationLayer
+@onready var minigame_canvas: CanvasLayer = get_parent() as CanvasLayer
 
 var shelf_book = preload("res://scenes/minigame/shelf_book_btn.tscn")
 #var target_genre: String = "dragon"
@@ -146,21 +147,39 @@ func _on_light_dropped(light: Node2D):
 func is_position_inside_placement_area(
 		world_position: Vector2
 ) -> bool:
+	#var query := PhysicsPointQueryParameters2D.new()
+	#query.position = world_position
+	#query.collision_mask = drop_zone_area_2d.collision_layer
+	#query.collide_with_areas = true
+	#query.collide_with_bodies = false
+	#var results := (
+		#get_world_2d()
+		#.direct_space_state
+		#.intersect_point(query)
+	#)
+	#for result in results:
+		#if result["collider"] == drop_zone_area_2d:
+			#return true
+	#label.visible = true
+	#var tween = create_tween()
+	#tween.tween_interval(4.0)
+	#tween.tween_callback(func(): label.visible = false )
+	#return false
+
 	var query := PhysicsPointQueryParameters2D.new()
+
 	query.position = world_position
 	query.collision_mask = drop_zone_area_2d.collision_layer
 	query.collide_with_areas = true
 	query.collide_with_bodies = false
-	var results := (
-		get_world_2d()
-		.direct_space_state
-		.intersect_point(query)
-	)
+
+	query.canvas_instance_id = minigame_canvas.get_instance_id()
+
+	var results = get_world_2d().direct_space_state.intersect_point(query)
+
 	for result in results:
 		if result["collider"] == drop_zone_area_2d:
 			return true
+
 	label.visible = true
-	var tween = create_tween()
-	tween.tween_interval(4.0)
-	tween.tween_callback(func(): label.visible = false )
 	return false

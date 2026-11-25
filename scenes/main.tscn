@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c65yic21hbiiq"]
+
+[ext_resource type="PackedScene" uid="uid://bdgtwvlxpmmco" path="res://scenes/level.tscn" id="1_0wfyh"]
+
+[node name="Main" type="Node" unique_id=826091696]
+
+[node name="Level" parent="." unique_id=241710488 instance=ExtResource("1_0wfyh")]
+
+[node name="MinigameLayer" type="CanvasLayer" parent="." unique_id=71409735]

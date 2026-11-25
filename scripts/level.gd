@@ -6,6 +6,9 @@ extends Node2D
 var visitor = preload("res://scenes/npc/visitor.tscn")
 @onready var npcs: Node2D = $npcs
 
+var minigame_scene = preload("res://scenes/minigame/books_in_shelf.tscn")
+var minigame_instance
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visitor_spawn_timer.timeout.connect(_on_timer_timeout)

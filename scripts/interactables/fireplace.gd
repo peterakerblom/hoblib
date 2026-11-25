@@ -1,6 +1,10 @@
 extends Interactable
 
-var minigame = preload("res://scenes/minigame/books_in_shelf.tscn")
+var minigame_scene = preload("res://scenes/minigame/books_in_shelf.tscn")
+var minigame_instance
+@onready var level: Node2D = $"../.."
+@onready var main: Node = $"../../.."
+@onready var minigame_layer = get_tree().root.get_node("Main/MinigameLayer")
 
 
 func interact():
@@ -8,5 +12,13 @@ func interact():
 	print("START MINIGAME")
 	#var minigame_scene = minigame.instantiate()
 	#get_tree().root.add_child(minigame_scene)
-	
-	get_tree().change_scene_to_file("res://scenes/minigame/books_in_shelf.tscn")
+	#get_tree().change_scene_to_file("res://scenes/minigame/books_in_shelf.tscn")
+	start_minigame()
+
+func start_minigame():
+	level.process_mode = Node.PROCESS_MODE_DISABLED
+	level.visible = true
+	minigame_instance = minigame_scene.instantiate()
+	minigame_layer.add_child(minigame_instance)
+	#get_tree().root.add_child(minigame_instance)
+	#level.add_child(minigame_instance)ww
