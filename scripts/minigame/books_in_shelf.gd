@@ -1,6 +1,7 @@
 extends Control
 
-signal book_selected(genre)
+#signal book_selected(genre)
+signal minigame_finished(won: bool, selected_genre: String)
 
 @onready var v_box: VBoxContainer = $MarginContainer2/MarginContainer/VBoxContainer
 @onready var shelf_light_source: Node2D = $ShelfLightSource
@@ -129,14 +130,21 @@ func _on_book_selected(selected_genre: String, book):
 
 	if selected_genre == target_genre:
 		print("Right book found!")
-		emit_signal("book_selected", selected_genre)
+		#emit_signal("book_selected", selected_genre)
+		emit_signal("minigame_finished", true, selected_genre)
+		
+		process_mode = Node.PROCESS_MODE_DISABLED
+		visible = false
 		queue_free()
-		get_tree().change_scene_to_file("res://scenes/level.tscn")
+		#get_tree().change_scene_to_file("res://scenes/level.tscn")
 	else:
 		print("Wrong book found!")
-		emit_signal("book_selected", selected_genre)
+		#emit_signal("book_selected", selected_genre)
+		emit_signal("minigame_finished", false, selected_genre)
+		process_mode = Node.PROCESS_MODE_DISABLED
+		visible = false
 		queue_free()
-		get_tree().change_scene_to_file("res://scenes/level.tscn")
+		#get_tree().change_scene_to_file("res://scenes/level.tscn")
 
 func _on_light_dropped(light: Node2D):
 	var accepted := is_position_inside_placement_area(

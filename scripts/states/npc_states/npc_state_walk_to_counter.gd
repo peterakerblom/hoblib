@@ -54,7 +54,10 @@ func update(_delta) -> void:
 
 func physics_update(delta) -> void:
 	if npc.global_position.distance_to(npc.destination) <= 5.0:
-		npc.change_state(Enums.NpcStateEnum.IDLE_GENRE_REQUEST)
+		if npc.is_leaving:
+			npc.queue_free()
+		else:
+			npc.change_state(Enums.NpcStateEnum.IDLE_GENRE_REQUEST)
 		return
 
 	var direction = npc.global_position.direction_to(npc.destination)

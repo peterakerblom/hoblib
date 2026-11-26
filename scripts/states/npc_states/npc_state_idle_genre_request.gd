@@ -21,6 +21,8 @@ func enter() -> void:
 	timer = randf_range(1.0, 2.0)
 
 func exit() -> void:
+	npc.talk_bubble.visible = false
+	npc.icon.texture = null
 	pass
 
 func update(_delta) -> void:

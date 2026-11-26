@@ -1,5 +1,7 @@
 extends Node
 
+signal shire_rep_changed
+
 var shire_rep := 0
 var library_standard := 10
 var genres := {
@@ -12,3 +14,7 @@ var genres := {
 	7 : "heart",
 	8 : "sword",
 }
+
+func increse_shire_rep(amount):
+	shire_rep += amount
+	emit_signal("shire_rep_changed")

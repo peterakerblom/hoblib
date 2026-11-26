@@ -181,3 +181,10 @@ position = Vector2(370, 327)
 [node name="VisitorSpawnTimer" type="Timer" parent="." unique_id=2003566904]
 one_shot = true
 autostart = true
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1194026772]
+
+[node name="ShireRep" type="Label" parent="UILayer" unique_id=1921257546]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "TEST"

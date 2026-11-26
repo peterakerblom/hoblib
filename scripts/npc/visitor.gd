@@ -13,6 +13,7 @@ var interactable: Interactable
 var destination: Vector2
 @onready var talk_bubble: Sprite2D = $TalkBubbleSprite2D
 @onready var icon: TextureRect = $TextureRectIcon
+var is_leaving = false
 
 func _ready() -> void:
 	$InteractionArea.area_entered.connect(_on_interaction_area_entered)
@@ -34,8 +35,6 @@ func _physics_process(delta: float) -> void:
 	pass
 	current_state.physics_update(delta)
 	move_and_slide()
-	
-
 
 func _process(delta):
 	current_state.update(delta)
@@ -58,3 +57,8 @@ func _on_interaction_area_entered(area: Area2D) -> void:
 func _on_interaction_area_exited(area: Area2D) -> void:
 	if area is Interactable:
 		interactable = null
+
+func book_recieved(position):
+	is_leaving = true
+	set_destination(position)
+	change_state(Enums.NpcStateEnum.WALK_TO_COUNTER)

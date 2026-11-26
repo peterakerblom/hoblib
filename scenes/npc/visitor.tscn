@@ -254,7 +254,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="Visitor" type="CharacterBody2D" unique_id=119768299]
+[node name="Visitor" type="CharacterBody2D" unique_id=119768299 groups=["npc"]]
 script = ExtResource("1_3f73w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=834831627]

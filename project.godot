@@ -28,6 +28,7 @@ Minigame="*uid://oq51f3uqdymb"
 [global_group]
 
 player=""
+npc=""
 
 [input]
 
