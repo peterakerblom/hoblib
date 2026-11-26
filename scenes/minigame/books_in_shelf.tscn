@@ -45,7 +45,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_g5sb0")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1509717559]
-color = Color(0.13374922, 0.10457135, 0.08666722, 1)
+color = Color(0.004785567, 0.0031892285, 0.0023911875, 1)
 
 [node name="ShelfLightSource" parent="." unique_id=227689962 instance=ExtResource("4_d00ta")]
 position = Vector2(787, 490)
